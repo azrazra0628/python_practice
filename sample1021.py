@@ -121,12 +121,59 @@
 # ●問題６－５
 # 数を10個入力してその合計を表示するプログラムを作りなさい．
 
-total = 0 
-lst = []
-for i in range(10):
-    n =int(input('please enter an interger > '))
-    total += n
-    lst.append(n)
-print('合計値は'+str(total)+'です')
+# total = 0 
+# lst = []
+# for i in range(10):
+#     n =int(input('please enter an interger > '))
+#     total += n
+#     lst.append(n)
+# print('合計値は'+str(total)+'です')
 
-print('+'.join(str(lst)))
+# print('+'.join(str(lst)))
+
+
+
+# ●問題６－７
+# 入力した10個の数の中に1と0，どちらが多いかを判定するプログラムを作りなさい．
+
+# count0 = 0
+# count1 = 0
+
+# for i in range(10):
+#     n = int(input('please enter an interger > '))
+#     if n == 0 :
+#         count0 += 1
+#     elif n == 1 :
+#         count1 += 1
+# if count0 > count1 :
+#     print('0のほうが1より'+str(count0-count1)+'回多く選択されました')
+# elif count1 > count0 :
+#     print('1のほうが0より'+str(count1-count0)+'回多く選択されました')
+# else :
+#     print('同点です')
+
+
+# ■問題５－１６（▲参考：問題５－１１）
+# キーボードから数xを入力し，xの数だけ#を横に並べて表示する，
+# という作業を繰り返すプログラムを作りなさい．
+# ただし，入力した数が0なら終了するようにします．
+# 例えば，5,3,15,0と入力した場合にはこのようになります．
+
+
+# n = int(input('please enter an interger > '))
+# print(str(n)+':'+'#'*n)
+
+# n = int(input('please enter an interger > '))
+# print(str(n)+':',end='')
+# for i in range(0,n):
+#     print('#',end='')
+
+
+def string_splosion(str):
+  result = ''
+  for i in range(len(str)):
+    result += str[:i]
+  result += str
+  return result
+
+string_splosion(str(input))

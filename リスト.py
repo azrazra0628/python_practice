@@ -53,6 +53,11 @@ print(todo)
 
 len(todo)
 
+# リストの順番を任意で変更する
+# リスト[インデクス]　= リスト[インデクス]
+todo[0],todo[1] = todo[1],todo[0]
+print(todo)
+
 
 # # リストの要素の並び替え
 
