@@ -113,3 +113,61 @@ print(arr1)
 print()
 arr2 = np.unravel_index([4,20],(6,7,8))
 print(arr2)
+
+
+##6-1 タイル状の配列
+
+##配列を指定し、タイル状に並べる
+
+# 変数 = np.tile(配列,(横にいくつか,縦にいくつか))
+
+#%%
+import numpy as np
+
+arr1 = np.array([[1,2,3],
+                    [4,5,6],
+                    [7,8,9]])
+arr2 = np.tile(arr1,(3,3))
+print(arr1)
+print()
+print(arr2)
+
+##7-1同一の要素を取り出す
+
+# 指定した配列から同一の要素を取り出す
+#引数となる配列は2つまで
+
+# 変数 = np.intersect1d(配列1,配列2)
+
+#%%
+Z1 = np.random.randint(0,10,10)
+Z2 = np.random.randint(0,10,10)
+print(Z1)
+print()
+print(Z2)
+print()
+print(np.intersect1d(Z1,Z2))
+
+
+##8-1日付取得
+
+# datetimeモジュールをインポートしなくても、numpyの関数で取得可能
+
+# 本日の日付の取得方法
+
+# np.datetime64('today', 'D') 
+
+# 昨日や明日も以下の通り
+
+# yesterday = np.datetime64('today', 'D') - np.timedelta64(1, 'D')
+# tomorrow  = np.datetime64('today', 'D') + np.timedelta64(1, 'D')
+
+##8－2月の日付確認
+
+任意の年の日付を確認する
+
+変数 = np.arange('yyyy-mm', 'yyyy-mm+1', dtype='datetime64[D]')
+
+#%%
+Z = np.arange('2016-07', '2016-09', dtype='datetime64[D]')
+print(Z)
