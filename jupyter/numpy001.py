@@ -70,7 +70,9 @@ print(arr2%arr1)
 
 #%%
 import numpy as np
-arr1 = np.matrix([[1,2,3], [4,5,6],[7,8,9]])
+arr1 = np.matrix([[1,2,3],
+                     [4,5,6],
+                     [7,8,9]])
 print(arr1)
 
 ##4-2単位行列の作成
