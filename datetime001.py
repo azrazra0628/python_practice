@@ -1,4 +1,4 @@
-##今日の日付を取得
+i##今日の日付を取得
 import datetime
 datetime.date.today()
 

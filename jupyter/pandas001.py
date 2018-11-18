@@ -76,7 +76,7 @@ df[:5]
 # 変数[列名][スライス]
 
 #%%
-df['点数'][:10]
+# df['点数'][:10]
 # 0    31
 # 1    21
 # 2    11
@@ -93,10 +93,10 @@ df['点数'][:10]
 # 変数[追加列名] = データ
 
 #%%
-import numpy as np
+# import numpy as np
 
-df['総合'] = [np.random.randint(0,100) for i in range(1,51)]
-df[:5]
+# df['総合'] = [np.random.randint(0,100) for i in range(1,51)]
+# df[:5]
 # 	名前	教科	点数	総合
 # 0	山田	国語	31	20
 # 1	山田	数学	21	77
@@ -109,10 +109,10 @@ df[:5]
 # del 変数['列名']
 
 #%%
-del df['総合']
-df[:5]
+# del df['総合']
+# df[:5]
 
-列の名前はDataFrameのcolumnsに保管されている。
+# 列の名前はDataFrameのcolumnsに保管されている。
 
 #%%
 df.columns
