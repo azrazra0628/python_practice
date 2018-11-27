@@ -34,12 +34,12 @@ re.fullmatch(r'[0-9]{3}-[0-9]{4}', '123-4567')
 # (?=.*[0-9])    数字が使われている
 # [a-zA-Z0-9]　　英小文字、英大文字、数字のいずれか1文字
 # {8,}　　　　　　直前の文字が8文字以上続く
-
+#%%
 pattern = r'(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{8,}'
 
 re.match(pattern, 'Konsai123')
 re.match(pattern, 'wadasatoshi')
-
+#%%
 import re
 import sys
 pattern = r'(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{8,}'
